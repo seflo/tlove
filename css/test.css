@@ -1,0 +1,93 @@
+html::-webkit-scrollbar {
+	display: none;
+}
+
+html::-mozilla-scrollbar {
+	display: none;
+}
+
+html {
+}
+
+body {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+.imgResponsive {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.button {
+	cursor: pointer;
+}
+
+/*  Main Divs */
+#intro {
+	z-index: 5;
+}
+
+#anim {
+	z-index: 4;
+}
+
+#nav {
+	z-index: 3;
+	bottom: -1px;
+	height: 20%;
+}
+
+#nav .button {
+	background-color: transparent;
+	height: 50%;
+}
+
+#nav .button img {
+	height: 100%;
+}
+
+#nav .bar {
+	background-color: black;
+	opacity: 0.85;
+	height: 50%;
+}
+
+#main {
+	z-index: 2;	
+}
+
+#bg {
+	z-index: 1;
+}
+
+/*-------------------------------------*/
+
+/* For Fun */
+#bg .top {
+	height: 75%;
+}
+
+#bg .bottom {
+	height: 25%;
+}
+
+#bg > div > div {
+	float: left;
+	width: 16.666667%;
+	height: 100%;
+}
