@@ -6,7 +6,10 @@ html::-mozilla-scrollbar {
 	display: none;
 }
 
-html {
+html, body, div, ul, li {
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
 body {
@@ -14,26 +17,49 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding: 0;
-	margin: 0;
-	border: 0;
+	font-family: sans-serif;
+	font-size: 5.5vmin;
+	color: white;
 }
 
 body > div {
 	width: 100%;
-	height: 100%;
+	height: 100.001%;
 	position: absolute;
-	margin: 0;
-	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+	color: inherit;
+}
+
+a:hover {
+	cursor: pointer;
 }
 
 .imgResponsive {
 	display: block;
 	height: auto;
-	max-width: 100%;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .button {
+	cursor: hand;
 	cursor: pointer;
 }
 
@@ -48,25 +74,85 @@ body > div {
 
 #nav {
 	z-index: 3;
-	bottom: -1px;
+	bottom: 0;
 	height: 20%;
 }
-
-#nav .button {
-	background-color: transparent;
+#nav > div {
 	height: 50%;
+	width: 100%;
 }
 
-#nav .button img {
+#nav .container {
+	background-color: transparent;
+}
+
+#nav .container > div {
+	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#nav .toggle {
+	float: left;
+}
+
+#nav .toggle img {
 	height: 100%;
 }
 
-#nav .bar {
-	background-color: black;
-	opacity: 0.85;
-	height: 50%;
+/* Secondary Album Menu */
+#albumMenu {
+	background-color: rgba(0,0,0,0.6);
+	position: absolute;
+
+} 
+
+#albumMenu li {
+	width: 100%;
 }
 
+#albumMenu span {
+	padding: 0px 5vmin 0;
+}
+
+/* Horizontal Menu Shit */
+.menu {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.menu li {
+	float: left;
+	overflow: hidden;
+}
+
+.menu li a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.menu li div {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.menu li div span {
+	vertical-align: middle;
+	display: table-cell;
+	text-overflow: ellipsis;
+}
+
+#mainMenu li {
+	height: 100%;
+	width: 20%;
+	text-align: center;
+}
+
+/* Vertical Menu Shit */
+/* */
 #main {
 	z-index: 2;	
 }
